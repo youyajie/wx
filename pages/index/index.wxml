@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <text class='flowerName'>{{care.name}}</text>
+  <view wx:for="{{care.imgList}}">
+    <image src="http://localhost:8080/img?name={{item}}"></image>
+  </view> 
+  <rich-text class='flowerContent'>{{care.content}}</rich-text>
+</view>

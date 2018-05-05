@@ -1,0 +1,13 @@
+/**index.wxss**/
+.container {
+  padding: 20rpx 0;
+}
+
+.flowerName {
+  margin-bottom: 15rpx;
+}
+
+.flowerContent {
+  margin-top: 15rpx;
+  font-size: 20;
+}
