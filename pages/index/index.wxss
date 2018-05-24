@@ -1,13 +1,13 @@
 /**index.wxss**/
-.container {
-  padding: 20rpx 0;
-}
-
 .flowerName {
-  margin-bottom: 15rpx;
+  margin-bottom: 15px;
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 .flowerContent {
-  margin-top: 15rpx;
-  font-size: 20;
+  font-size: 15px;
+  color: grey;
+  line-height: 24px;
 }
+

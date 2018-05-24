@@ -4,28 +4,42 @@ const app = getApp()
 
 Page({
   data: {
-    care: {}
+    care: {},
+    info: {}
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  getList: function () {
+    wx.redirectTo({
+      url: '/pages/list/list'
+    })
+  },
+  onLoad: function (option) {
+    info: option
+    var id = option.id != null ? option.id : ''
     wx.request({
-      url: 'http://localhost:8080/care/wx/list',
+      url: 'http://localhost:8080/care/wx/detail?id=' + id,
       data: {},
       method: 'GET',
       header: {
         'content-type': 'application/json'
       },
-      success: res=>{
+      success: res => {
         console.log("data:" + res.data + res.data.name);
         this.setData({
           care: res.data
         })
       }
-    })  
+    })
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: care.name + '养护方式',
+      path: '/pages/index/index?id=' + info.id
+    }
   }
 })

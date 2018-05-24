@@ -5,6 +5,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
   box-sizing: border-box;
+  padding: 20rpx 0;
 } 
+
+.shareBtn {
+  width: 30%;
+  margin-left: 70%;
+}
+
+.menuBtn {
+  width: 60%;
+  margin-left: 40%;
+}

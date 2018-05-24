@@ -1,8 +1,19 @@
 <!--index.wxml-->
+<view class='menuBtn'>
+  <button plain='true' size='mini' bindtap="getList" style='color: #006890; border-color: #006890; margin-right:5px;'>其他花儿</button>
+  <button open-type="contact" plain='true' size='mini' style='color: orange; border-color: orange; '>与我分享</button>
+</view>
+
 <view class="container">
   <text class='flowerName'>{{care.name}}</text>
-  <view wx:for="{{care.imgList}}">
-    <image src="http://localhost:8080/img?name={{item}}"></image>
+  <text class='flowerContent'>{{care.content}}</text>
+  <view wx:for="{{care.imgList}}" wx:key="unique">
+    <image src="http://localhost:8080/img?name={{item}}" mode='aspectFit'></image>
   </view> 
-  <rich-text class='flowerContent'>{{care.content}}</rich-text>
 </view>
+
+<view class='menuBtn' style='margin-top: 20px;'>
+  <button plain='true' size='mini' bindtap="getList" style='color: #006890; border-color: #006890; margin-right:5px;'>其他花儿</button>
+  <button open-type="contact" plain='true' size='mini' style='color: orange; border-color: orange; '>与我分享</button>
+</view>
+
