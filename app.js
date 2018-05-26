@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    flowerServer: 'http://39.104.26.168:18008'
   }
 })

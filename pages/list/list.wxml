@@ -5,9 +5,13 @@
 
 <view class="container">
   <view wx:for="{{careList}}" wx:key="unique" bindtap="getDetail" class='item'>
-      <image src="http://localhost:8080/img?name={{item.thumbnail}}"                     id="{{item.id}}" class="imgList" mode="scaleToFill" />
+      <image src="{{imgServer}}/img?name={{item.thumbnail}}"                     id="{{item.id}}" class="imgList" mode="scaleToFill" />
       <text id="{{item.id}}" class='itemText'>{{item.name}}</text>
   </view>
+</view>
+
+<view class='title'>
+<text>花开是一件美妙的事情</text>
 </view>
 
 

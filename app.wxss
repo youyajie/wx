@@ -7,6 +7,8 @@
   justify-content: space-between;
   box-sizing: border-box;
   padding: 20rpx 0;
+  width: 88%;
+  margin-left: 6%;
 } 
 
 .shareBtn {
@@ -17,4 +19,11 @@
 .menuBtn {
   width: 60%;
   margin-left: 40%;
+}
+
+.title {
+  margin-top: 25px;
+  font-size: 10px;
+  color: grey;
+  text-align: center;
 }

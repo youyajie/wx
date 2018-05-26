@@ -5,7 +5,8 @@ const app = getApp()
 Page({
   data: {
     care: {},
-    info: {}
+    info: {},
+    imgServer: app.globalData.flowerServer
   },
   //事件处理函数
   bindViewTap: function () {
@@ -22,7 +23,7 @@ Page({
     info: option
     var id = option.id != null ? option.id : ''
     wx.request({
-      url: 'http://localhost:8080/care/wx/detail?id=' + id,
+      url: app.globalData.flowerServer + '/care/wx/detail?id=' + id,
       data: {},
       method: 'GET',
       header: {

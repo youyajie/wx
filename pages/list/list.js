@@ -1,7 +1,10 @@
+//获取应用实例
+const app = getApp()
 
 Page({
   data: {
-    careList: {}
+    careList: {},
+    imgServer: app.globalData.flowerServer
   },
   getDetail: function (event) {
     console.log("detail:" + event.target.id)
@@ -11,7 +14,7 @@ Page({
   },
   onLoad: function () {
     wx.request({
-      url: 'http://localhost:8080/care/wx/list',
+      url: app.globalData.flowerServer + '/care/wx/list',
       data: {},
       method: 'GET',
       header: {
