@@ -7,8 +7,8 @@ Page({
     imgServer: app.globalData.flowerServer
   },
   getDetail: function (event) {
-    console.log("detail:" + event.target.id)
-    wx.redirectTo({
+    app.globalData.backSign = true
+    wx.navigateTo({
       url: '/pages/index/index?id=' + event.target.id
     })
   },
@@ -21,7 +21,6 @@ Page({
         'content-type': 'application/json'
       },
       success: res => {
-        console.log("dataList:" + res.data);
         this.setData({
           careList: res.data
         })

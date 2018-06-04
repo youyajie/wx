@@ -15,12 +15,20 @@ Page({
     })
   },
   getList: function () {
-    wx.redirectTo({
-      url: '/pages/list/list'
-    })
+    if (app.globalData.backSign) {
+      wx.navigateBack({
+        url: '/pages/list/list'
+      })
+    } else {
+      wx.redirectTo({
+        url: '/pages/list/list'
+      })
+    }
   },
   onLoad: function (option) {
-    info: option
+    this.setData({
+      info: option
+    })
     var id = option.id != null ? option.id : ''
     wx.request({
       url: app.globalData.flowerServer + '/care/wx/detail?id=' + id,
@@ -30,7 +38,6 @@ Page({
         'content-type': 'application/json'
       },
       success: res => {
-        console.log("data:" + res.data + res.data.name);
         this.setData({
           care: res.data
         })

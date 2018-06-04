@@ -35,6 +35,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    flowerServer: 'http://39.104.26.168:18008'
+    flowerServer: 'http://localhost:8080',
+    // flowerServer: 'http://39.104.26.168:18008',
+    backSign: false
   }
 })
